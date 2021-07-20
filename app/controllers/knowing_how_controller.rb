@@ -1,0 +1,2 @@
+class KnowingHowController < ApplicationController
+end

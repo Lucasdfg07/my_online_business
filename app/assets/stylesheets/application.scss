@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import "bootstrap/scss/bootstrap";
+
+@import "home";
+@import "knowing_how";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background: url('home_wallpaper.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.div_center {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.fullscreen-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-bg {
+  height: 100vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+      background-size: cover;
+  }
+
+  iframe {
+      width: 100%;
+  }
+}
