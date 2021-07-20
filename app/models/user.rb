@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   validates_presence_of :name, :email, :age
 
+  enum business: [:products, :services]
+
   def perfil_photo
     if self.avatar.attached?
         self.avatar

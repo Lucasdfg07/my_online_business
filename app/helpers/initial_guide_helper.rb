@@ -1,0 +1,2 @@
+module InitialGuideHelper
+end

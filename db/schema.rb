@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_20_015415) do
+ActiveRecord::Schema.define(version: 2021_07_20_035622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2021_07_20_015415) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "social_networks", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_social_networks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,8 +61,9 @@ ActiveRecord::Schema.define(version: 2021_07_20_015415) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "role_id"
     t.string "name"
-    t.string "sector"
     t.integer "age"
+    t.integer "business"
+    t.string "sector"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"

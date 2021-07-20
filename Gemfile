@@ -9,6 +9,8 @@ gem 'devise'
 # Active Storage
 gem "image_processing", ">= 1.2"
 
+# Select 2 to multiple options
+gem "select2-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'

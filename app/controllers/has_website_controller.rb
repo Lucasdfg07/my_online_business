@@ -1,0 +1,2 @@
+class HasWebsiteController < ApplicationController
+end

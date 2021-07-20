@@ -1,0 +1,33 @@
+<%= javascript_pack_tag 'search' %>
+
+<div class="div_center">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>O Início da Jornada.</h4>
+
+            <hr />
+
+            <p>
+                Nosso dever aqui é nos conhecermos melhor, e hoje em dia, nada melhor do que perguntar as
+                redes de alguém para poder conhecê-la melhor, não é mesmo?!
+            </p>
+
+            <p>
+                Sendo assim, quais redes <b>seu negócio</b> possui?!
+            </p>
+
+            <hr />
+
+            <%= form_with(model: @network) do |f| %>
+                <div class="field">
+                    <%= f.select(:name,  SocialNetwork.names.keys, {include_blank: 'Selecione'}, id: 'dropdown', class: 'form-control', multiple: true) %>
+                    <small><b>(Caso não tenha nenhuma, deixe em branco)</b></small>
+                </div>
+                
+                <div class="actions mt-2">
+                    <%= f.submit 'Prosseguir', class: 'btn btn-primary' %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
