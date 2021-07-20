@@ -23,7 +23,7 @@
             
             <%= form_with(model: @network) do |f| %>
                 <div class="field">
-                    <%= f.select(:name,  SocialNetwork.names.keys, {selected: current_user.social_networks.pluck(:name)}, id: 'dropdown', class: 'form-control', multiple: true) %>
+                    <%= f.select(:name,  SocialNetwork.names.keys, {selected: current_user.social_networks.pluck(:name)}, id: 'dropdown', class: 'form-control w-100', multiple: true) %>
                     <small><b>(Caso não tenha nenhuma, deixe em branco)</b></small>
                 </div>
                 
