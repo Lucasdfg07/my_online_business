@@ -14,4 +14,16 @@
     <%= link_to 'Editar Perfil', edit_user_registration_path, class: "dropdown-item" %>
 
     <%= link_to 'Sair', destroy_user_session_path, class: "dropdown-item" %>
+
+    <hr />
+    
+    <div class="selos">
+        <h5>Selos</h5>
+
+        <%= image_tag 'selos/social_media' if current_user.question_responses_percentage %>
+        <%= image_tag 'selos/website' if current_user.responded_website %>
+        <%= image_tag 'selos/public_media' if current_user.responded_public %>
+        <%= image_tag 'selos/ads' if current_user.responded_investment %>
+        <%= image_tag 'selos/to_the_world' if current_user.responded_online_business %>
+    </div>
 </div>
