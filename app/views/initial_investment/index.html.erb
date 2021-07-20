@@ -1,0 +1,64 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4 w-100">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Preciso investir dinheiro para <b>Começar</b>?!</h4>
+
+            <hr />
+
+            <p>
+                Depende. Os dois chegam de 0 a 100, o que diferencia é em <b>quanto tempo</b>.
+            </p>
+
+            <p>
+                Se você precisa chegar a um milhão de visualizações em sua <b>página</b> ou <b>vídeo</b>, em
+                <b>2 meses</b>, ou você paga para ser mais divulgado e atingir mais facilmente, ou terá que
+                pensar em estratégias para pessoas compartilharem seu conteúdo o suficiente para <b>obter esse resultado</b>.
+            </p>
+
+            <p>
+                Você nada mais fará do que pagar para a plataforma <b>imprimir mais</b> o seu conteúdo,
+                assim mais pessoas visualizam e mais cliques você tem. Mas <b>não é verdadeiro</b> que você só
+                terá cliques e visualizações se pagar. 
+            </p>
+
+            <p>
+                Aqui vão algumas estimativas de preço:
+            </p>
+
+            <ul>
+                <li class="m-3">O investimento mínimo diário para o <a href="https://rockcontent.com/br/blog/facebook-ads/">Facebook Ads</a> (Divulgação em <b>Facebook, Instagram</b>) é de <b>R$ 6,00</b>. Sendo assim, R$ 49,00 por semana se anunciado todos os dias concecutivamente.</li>
+                <li class="m-3">O investimento mínimo diário para propagandas no <a href="https://rockcontent.com/br/blog/linkedin-ads/">LinkedIn Ads</a> é de <b>US$ 10,00</b>. Sendo assim, US$300,00 por semana se anunciado todos os dias concecutivamente.</li>
+                <li class="m-3">O Youtube utiliza o <a href="https://rockcontent.com/br/blog/google-adsense/">Google Ads</a> e não possui investimento mínimo, podendo ser investido até R$ 1,00 por dia.</li>
+            </ul>
+
+            <%= image_tag 'youtube_ads', class: 'container' %>
+
+            <p class="mt-4">
+                Ops: <b>Facebook Ads, Google Ads e LinkedIn Ads</b> são plataformas para anunciantes.  <br />
+                Você pode saber mais sobre eles <a href="https://resultadosdigitais.com.br/blog/social-ads/">aqui.</a>
+            </p>
+
+
+            <hr />
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :responded_investment, value: !current_user.responded_investment %>
+                
+                <%= f.check_box :responded_investment, class: "form_checkbox" %>
+                Entendi como funcionam as propagandas
+            <% end %>
+            
+            <% if current_user.responded_investment %>
+                <hr />
+
+                <%= link_to 'Completar', root_path, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', root_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

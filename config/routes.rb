@@ -26,5 +26,7 @@ Rails.application.routes.draw do
   resources '/youtube', to: "initial_guide#youtube", as: 'youtube'
   resources '/linkedin', to: "initial_guide#linkedin", as: 'linkedin'
 
+  resources '/investimento-inicial', to: "initial_investment#index", as: 'initial_investment'
+
   resources :social_networks, only: [:create]
 end

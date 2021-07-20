@@ -1,0 +1,2 @@
+module InitialInvestmentHelper
+end

@@ -41,7 +41,7 @@
 
                 <div class="row">
                     <div class="col-8 <%= current_user.responded_public && 'responded' %>">
-                        <h4>3º. Conhecendo seu público.</h4>
+                        <h4>3º. Conhecendo seu público. <b>(<%= current_user.responded_public ? '100' : '0' %> %)</b></h4>
                     </div>
 
                     <div class="col-4">
@@ -50,12 +50,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
-                        <h4>4º. Preciso ter um investimento inicial?</h4>
+                    <div class="col-8 <%= current_user.responded_investment && 'responded' %>">
+                        <h4>4º. Preciso ter um investimento inicial? <b>(<%= current_user.responded_investment ? '100' : '0' %> %)</b></h4>
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', has_website_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', initial_investment_index_path, class: 'button ms-4' %>
                     </div>
                 </div>
 
