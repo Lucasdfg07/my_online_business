@@ -7,6 +7,20 @@
 
             <hr />
             
+            <p>
+                Agora vamos fazer uma análise mais precisa do seu público alvo, e direcionar a <b>melhor estratégia</b> para você.
+            </p>
+
+            <p>
+                Aqui você vai aprender o melhor jeito para <b>gerir</b> as redes criadas anteriormente!
+            </p>
+
+            <p>
+                Quais redes você criou até agora para o <b>seu negócio</b>?!
+            </p>
+
+            <hr />
+            
             <%= form_with(model: @network) do |f| %>
                 <div class="field">
                     <%= f.select(:name,  SocialNetwork.names.keys, {selected: current_user.social_networks.pluck(:name)}, id: 'dropdown', class: 'form-control', multiple: true) %>

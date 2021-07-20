@@ -1,7 +1,7 @@
 class SocialNetwork < ApplicationRecord
     belongs_to :user
 
-    enum name: [:linkedin, :facebook, :instagram, :tiktok, :youtube]
+    enum name: [:linkedin, :facebook, :instagram, :youtube]
 
     validates_presence_of :name
 

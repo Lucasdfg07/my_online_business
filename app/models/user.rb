@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :social_networks
+  
+  has_one :public_age
 
   has_one_attached :avatar
 

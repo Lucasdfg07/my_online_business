@@ -1,0 +1,34 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Análise Final</h4>
+
+            <hr />
+
+            <% current_user.social_networks.each do |network| %>
+                <%= render "my_public/#{network.name}" %>
+            <% end %>
+
+            <h4>E aí?! Já tem o <b>Youtube, Facebook, LinkedIn e Instagram</b> e aprendeu melhor gerir suas redes?!</h4>
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :responded_public, value: !current_user.responded_public %>
+                
+                <%= f.check_box :responded_public, class: "form_checkbox" %>
+                Já criei todas as minhas redes e sei meu público
+            <% end %>
+            
+            <% if current_user.responded_public %>
+                <hr />
+
+                <%= link_to 'Completar', root_path, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', my_public_index_url, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>
