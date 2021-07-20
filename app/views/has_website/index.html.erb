@@ -1,0 +1,72 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4 w-100">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Website, o cartão de visita do século XXI.</h4>
+
+            <hr />
+
+            <p>
+                Um website nada mais é do que um <b>cartão de visitas digital</b>. Mais rápido, mais fácil,
+                mais informações e mais agilidade.
+            </p>
+
+            <p>
+                Passar credibilidade digitalmente não é uma tarefa fácil, e muita gente acredita que fazer um
+                website é <b>difícil e caro</b>, mas será que é mesmo?!
+            </p>
+
+            <p>
+                Bom, depende do seu objetivo. Se você está <b>iniciando no mundo digital</b>, você pode tranquilamente
+                criar um site no <b>Wix</b>, com esse <a href="https://pt.wix.com/">passo a passo completo</a>. <br />
+                É só seguir as instruções do website.
+            </p>
+
+            <p>
+                Bom, você terá seu cartão de visitas digital, mas poucas serão as pessoas que encontrarão seu website
+                navegando pelo <b>google</b>. Isso se chama <b>SEO</b>, que nada mais é do que técnicas utilizadas no seu
+                website para ele <b>aparecer para outras pessoas</b> no google, e ser mais visualizado.
+            </p>
+
+            <p>
+                Para isso, será necessária a contratação de alguma agência de marketing para eles fazerem essa gestão
+                e configuração do seu <b>website</b> e ele ser mais visualizado. Mas para um primeiro contato está <b>MUITO BOM!</b>
+            </p>
+
+            <%= image_tag 'wix', class: 'w-100' %>
+
+            <p class="mt-4">
+                <b>E aí?! Vamos criar seu website?!</b>
+            </p>
+
+            <p>
+                Eu sei que esse passo é um pouco mais complicado, apesar de ser simples! Então se precisar, dá
+                uma olhada no passo a passo em vídeo, abaixo.
+            </p>
+
+            <iframe width="560" height="315" class="w-100" src="https://www.youtube.com/embed/S_r579JKf5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <hr />
+
+            <small>(Para ir para o próximo passo é necessário finalizar sua página pelo <a href="https://www.mlabs.com.br/blog/tutorial-saiba-como-criar-uma-pagina-no-facebook/"><b>passo a passo</b></a>)</small> <br />
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :responded_website, value: !current_user.responded_website %>
+                
+                <%= f.check_box :responded_website, class: "form_checkbox" %>
+                Já criei a minha página
+            <% end %>
+            
+            <% if current_user.responded_website %>
+                <hr />
+
+                <%= link_to 'Completar', root_path, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', root_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
-                        <h4>2º. <b>Website</b>, o cartão de visita do século XXI.</h4>
+                    <div class="col-8 <%= current_user.responded_website && 'responded' %>">
+                        <h4>2º. <b>Website</b>, o cartão de visita do século XXI. <b>(<%= current_user.responded_website ? '100' : '0' %> %)</b></h4>
                     </div>
                     
                     <div class="col-4">
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', has_website_index_path, :"data-turbolinks" => false, class: 'button ms-4' %>
+                        <%= link_to 'Completar', my_public_index_path, :"data-turbolinks" => false, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
 
                 <div class="row">
                     <div class="col-8">
-                        <h4>5º. Colocando meu negócio online!</h4>
+                        <h4>5º. Colocando meu negócio no Google!</h4>
                     </div>
 
                     <div class="col-4">
