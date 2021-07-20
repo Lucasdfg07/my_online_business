@@ -1,19 +1,34 @@
 <%= javascript_pack_tag 'search' %>
 
-<div class="div_center">
+<div class="div_center mt-4">
     <div class="knowing_how">
         <div class="container">
-            <h4>O Início da Jornada.</h4>
+            <h4>Primeiramente, seja muito bem vindo(a).</h4>
 
             <hr />
 
             <p>
-                Nosso dever aqui é nos conhecermos melhor, e hoje em dia, nada melhor do que perguntar as
-                redes de alguém para poder conhecê-la melhor, não é mesmo?!
+                Esse é o passo a passo para fazer sua empresa decolar no <b>mercado digital</b>.
             </p>
 
             <p>
-                Sendo assim, quais redes <b>seu negócio</b> possui?!
+                Com o início da pandemia e a necessidade de <b>lockdown</b>, muitos negócios vieram a fechar e/ou
+                terem grandes prejuízos, já que o conceito de comércio sempre se inclinou às vendas físicas e/ou mais pessoais.
+            </p>
+
+            <p>
+                Já sabemos que a internet está aí, e existem várias ferramentas para potencializar o seu negócio, mas
+                o problema principal é: <br />
+                <b>Como utilizá-las?</b> <br />
+                <b>E qual se adequaria melhor ao seu negócio?</b>
+            </p>
+
+            <p>
+                Aqui você terá todo o <b>passo a passo</b> para digitalizar seu negócio, e enfim colocá-lo <b>online</b>.
+            </p>
+
+            <p>
+                Sendo assim, vamos nos conhecer melhor, quais redes <b>seu negócio</b> possui?!
             </p>
 
             <hr />
@@ -28,6 +43,10 @@
                     <%= f.submit 'Prosseguir', class: 'btn btn-primary' %>
                 </div>
             <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', :back, class: 'btn btn-warning' %>
         </div>
     </div>
 </div>
