@@ -20,6 +20,16 @@
     <div class="selos">
         <h5>Selos</h5>
 
+        <% if current_user.question_responses_percentage != 100 && 
+            !current_user.responded_website && 
+            !current_user.responded_public && 
+            !current_user.responded_investment && 
+            !current_user.responded_online_business %>
+
+            <h6>Nenhum selo conquistado.</h6> 
+            <h6>Complete atividades para conquistar selos.</h6>
+        <% end %>
+
         <%= image_tag 'selos/social_media' if current_user.question_responses_percentage == 100 %>
         <%= image_tag 'selos/website' if current_user.responded_website %>
         <%= image_tag 'selos/public_media' if current_user.responded_public %>
