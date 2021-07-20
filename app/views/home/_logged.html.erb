@@ -16,6 +16,22 @@
                 e assim você pode compartilhá-las, mostrando o quão digitalizado o seu negócio já está!
             </p>
 
+            <% if current_user.question_responses_percentage == 100 && 
+                current_user.responded_website && 
+                current_user.responded_public && 
+                current_user.responded_investment && 
+                current_user.responded_online_business %>
+                
+                <hr />
+
+                <div class="m-4 text-center">
+                    <h3>Parabéns! Você concluiu todas as etapas!</h3>
+                    <%= link_to export_pdf_home_path(format: :pdf), class: 'btn btn-dark' do %>
+                        Gerar Certificado de Conclusão
+                    <% end %>
+                </div>
+            <% end %>
+
             <hr />
             
             <div class="task">
@@ -25,7 +41,7 @@
                     </div>
                     
                     <div class="col-4">
-                        <%= link_to 'Completar', initial_guide_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', initial_guide_path, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -35,7 +51,7 @@
                     </div>
                     
                     <div class="col-4">
-                        <%= link_to 'Completar', has_website_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', has_website_path, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -45,7 +61,7 @@
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', my_public_index_path, :"data-turbolinks" => false, class: 'button ms-4' %>
+                        <%= link_to 'Completar', my_public_path, :"data-turbolinks" => false, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -55,7 +71,7 @@
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', initial_investment_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', initial_investment_path, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -65,7 +81,7 @@
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', business_on_google_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', business_on_google_path, class: 'button ms-4' %>
                     </div>
                 </div>
             </div>

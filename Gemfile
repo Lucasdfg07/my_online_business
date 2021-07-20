@@ -12,6 +12,9 @@ gem "image_processing", ">= 1.2"
 # Select 2 to multiple options
 gem "select2-rails"
 
+# PDF
+gem 'prawn'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
