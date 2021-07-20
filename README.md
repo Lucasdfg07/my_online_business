@@ -16,17 +16,18 @@ Meu Negócio Online nada mais é do que uma aplicação "gameficada" para instru
 Ao final dos 5 passos, ele terá o negócio dele online e conseguirá retirar um certificado de parabenização.
 
 
-## Technology 
+## Tecnologias 
 
-Here are the technologies used in this project.
+Aqui estão as tecnologias utilizadas nesse projeto:
 
 * Ruby version  3.0.2
 * Rails version 6.1.4
 * Postgres
 
-## Services Used
+## Serviços Utilizados
 
 * Github
+* Heroku
 
 ## Ruby Gems
 
@@ -87,6 +88,8 @@ As principais funcionalidades do projeto são:
 
 
 ## Links
+  - Deploy no Heroku: https://meu-negocio-online.herokuapp.com/
+  - 
   - Repositório: https://github.com/Lucasdfg07/my_online_business/
     - Em caso de bugs e/ou vulnerabilidades de segurança entre em contato com o email
       Lucassiqueiraferandes07@gmail.com diretamente ao invés de utilizar o "issue tracker". Valorizamos o 
