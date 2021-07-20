@@ -60,12 +60,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
-                        <h4>5º. Colocando meu negócio no Google!</h4>
+                    <div class="col-8 <%= current_user.responded_online_business && 'responded' %>">
+                        <h4>5º. Colocando meu negócio no Google! <b>(<%= current_user.responded_online_business ? '100' : '0' %> %)</b></h4>
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', has_website_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', business_on_google_index_path, class: 'button ms-4' %>
                     </div>
                 </div>
             </div>

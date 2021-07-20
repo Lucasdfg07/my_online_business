@@ -28,5 +28,7 @@ Rails.application.routes.draw do
 
   resources '/investimento-inicial', to: "initial_investment#index", as: 'initial_investment'
 
+  resources '/google-meu-negocio', to: "business_on_google#index", as: 'business_on_google'
+
   resources :social_networks, only: [:create]
 end

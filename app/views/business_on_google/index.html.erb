@@ -1,0 +1,60 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4 w-100">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Aparecendo no <b>Google Meu Negócio</b>!</h4>
+
+            <hr />
+
+            <p>
+                O <b>Google Meu Negócio</b> é uma ferramenta que facilita que uma empresa seja encontrada na Rede de Pesquisa do Google e do Google Maps.
+            </p>
+
+            <p>
+                Isso impulsionará muito a sua rede e visualização pois você estará vinculado na rede de mapas e da aba de pesquisa geral, 
+                onde navegam <b>milhões</b> de usuários diariamente.
+            </p>
+
+            <p>
+                Para começar, acesse o link oficial do Google para cadastrar o seu negócio online, <a href="https://www.google.com/intl/pt-BR_br/business/">clicando aqui</a>.
+            </p>
+
+            
+
+            <%= image_tag 'google_business', class: 'container' %>
+
+            <p class="mt-4">
+                Agora é só seguir o passo a passo e seu negócio estará online no Google, tendo visualizações digitais cada vez maiores.
+            </p>
+
+            <p>
+                Caso ainda restem dúvidas, dê uma olhada no passo a passo em <b>vídeo</b> abaixo.
+            </p>
+
+            <iframe width="560" height="315" class="container" src="https://www.youtube.com/embed/RvSct2uRBxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <h4>Conseguiu completar seu cadastro no <b>Google meu negócio?!</b></h4>
+
+            <hr />
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :responded_online_business, value: !current_user.responded_online_business %>
+                
+                <%= f.check_box :responded_online_business, class: "form_checkbox" %>
+                Consegui e meu negócio já está online no google
+            <% end %>
+            
+            <% if current_user.responded_online_business %>
+                <hr />
+
+                <%= link_to 'Completar', root_path, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', root_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

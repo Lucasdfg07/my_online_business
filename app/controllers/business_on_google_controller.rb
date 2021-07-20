@@ -1,0 +1,2 @@
+class BusinessOnGoogleController < ApplicationController
+end
