@@ -4,7 +4,6 @@
     background-color: rgba(245,245,245,0.8);
     padding: 20px;
     font-size: 1.1rem;
-    width: 100vw;
     
     .button {
         background: none;
@@ -42,5 +41,9 @@
         a:hover {
             padding: 5px 20px;
         }
+    }
+
+    ul li {
+        font-weight: bold;
     }
 }

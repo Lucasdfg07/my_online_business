@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :social_networks
+
   has_one_attached :avatar
 
   validates_presence_of :name, :email, :age
@@ -16,5 +18,16 @@ class User < ApplicationRecord
     else
         'no-photo'
     end
+  end
+
+  def question_responses_percentage
+    count = 0
+    
+    count += 25 if self.created_facebook_page
+    count += 25 if self.created_instagram_page
+    count += 25 if self.created_linkedin_page
+    count += 25 if self.created_youtube_page
+
+    count
   end
 end

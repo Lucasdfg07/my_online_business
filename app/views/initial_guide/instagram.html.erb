@@ -1,0 +1,66 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4 w-100">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Começando a voar no Instagram!</h4>
+
+            <hr />
+
+            <p>
+                Como no facebook, uma página no instagram para o seu negócio também precisa de algumas configurações.
+            </p>
+
+            <p>
+                Com o <b>Instagram Business</b>, você conseguirá acessar diferentes métricas e indicadores de 
+                performance, o que é ótimo para os negócios que querem otimizar sua estratégia na rede social.
+            </p>
+
+            <p>
+                Na prática, isso significa que você irá conhecer mais seu público, sabendo exatamente o caminho
+                que seu negócio deve seguir para ser <b>bem sucedido</b>!
+            </p>
+
+            <p>
+                <b>Mas como fazer isso?!</b>
+            </p>
+            
+            <%= image_tag 'instagram_profile', class: 'container w-100' %>
+
+            <p class="mt-4">
+                Você pode sempre acessar o <a href="https://business.instagram.com/getting-started?locale=pt_BR">passo a passo completo</a>.
+                Nesse passo a passo você confere as vantagens completas de ter o <b>Instagram Business</b>, além de
+                super dicas de como movimentar seu negócio por lá!
+            </p>
+
+            <p>
+                <b>E tudo isso DE GRAÇA!</b>
+            </p>
+
+            <p>
+                Bora pro próximo desafio?
+            </p>
+
+            <hr />
+
+            <small>(Para ir para o próximo passo é necessário finalizar sua conta no Instagram consultando o <a href="https://business.instagram.com/getting-started?locale=pt_BR">passo a passo</a>)</small> <br />
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :created_instagram_page, value: !current_user.created_instagram_page %>
+                
+                <%= f.check_box :created_instagram_page, class: "form_checkbox" %>
+                Já criei a minha conta
+            <% end %>
+            
+            <% if current_user.created_instagram_page %>
+                <hr />
+
+                <%= link_to 'Prosseguir', youtube_index_url, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', facebook_index_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

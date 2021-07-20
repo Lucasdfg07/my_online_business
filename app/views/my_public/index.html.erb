@@ -1,0 +1,26 @@
+<%= javascript_pack_tag 'search' %>
+
+<div class="div_center mt-4">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Conhecendo seu Público.</h4>
+
+            <hr />
+            
+            <%= form_with(model: @network) do |f| %>
+                <div class="field">
+                    <%= f.select(:name,  SocialNetwork.names.keys, {selected: current_user.social_networks.pluck(:name)}, id: 'dropdown', class: 'form-control', multiple: true) %>
+                    <small><b>(Caso não tenha nenhuma, deixe em branco)</b></small>
+                </div>
+                
+                <div class="actions mt-2">
+                    <%= f.submit 'Prosseguir', class: 'btn btn-primary' %>
+                </div>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', root_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+module MyPublicHelper
+end

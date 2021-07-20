@@ -1,0 +1,68 @@
+<%= javascript_pack_tag 'facebook_page' %>
+
+<div class="mt-4 w-100">
+    <div class="knowing_how">
+        <div class="container">
+            <h4>Dando os primeiros passos com o Facebook.</h4>
+
+            <hr />
+
+            <p>
+                Criar uma página no facebook não é a mesma coisa do que criar um perfil.
+                O facebook é a rede <b>mais utilizada no mundo</b>, e seu negócio não estar nela pode ser
+                uma grande falha.
+            </p>
+
+            <p>
+                Segundo estimativas, aproximadamente <b>2.7 bilhões de pessoas</b> utilizam o facebook, sendo dessas,
+                <b>130 milhões</b> brasileiras. Imagine o potencial que a sua rede pode chegar!
+            </p>
+
+            <p>
+                Criando uma página para o seu negócio, as pessoas conseguem te encontrar mais facilmente e o
+                facebook te recomenda para lojas que você goste e/ou estão perto de você.
+            </p>
+
+            <%= image_tag 'facebook_map', class: 'w-100' %>
+
+            <p class="mt-4">
+                Seus clientes podem <b>acessar a sua página</b>, <b>deixar avaliações</b>, <b>interagir mais em suas publicações</b>, 
+                e o facebook também coleta dados do fluxo do seu negócio, baseado na localização dos clientes.
+            </p>
+
+            <%= image_tag 'facebook_page', class: 'w-100' %>
+
+            <p class="mt-4">
+                Logo abaixo você também terá a exibição de dados cruciais para o impulsionamento do seu negócio!
+            </p>
+
+            <%= image_tag 'facebook_page_about' %>
+
+            <p class="mt-4">
+                Imagine quanta gente consegue ter as informações da loja na palma da mão, em <b>poucos minutos</b>, tanto para venda de <b>serviços</b> quanto para venda de <b>produtos</b>.
+                Para isso, acesse esse <a href="https://www.mlabs.com.br/blog/tutorial-saiba-como-criar-uma-pagina-no-facebook/"><b>passo a passo completo.</b></a>
+            </p>
+
+            <hr />
+
+            <small>(Para ir para o próximo passo é necessário finalizar sua página pelo <a href="https://www.mlabs.com.br/blog/tutorial-saiba-como-criar-uma-pagina-no-facebook/"><b>passo a passo</b></a>)</small> <br />
+
+            <%= form_for(current_user, url: user_registration_path, html: { method: :put }) do |f| %>
+                <%= f.hidden_field :created_facebook_page, value: !current_user.created_facebook_page %>
+                
+                <%= f.check_box :created_facebook_page, class: "form_checkbox" %>
+                Já criei a minha página
+            <% end %>
+            
+            <% if current_user.created_facebook_page %>
+                <hr />
+
+                <%= link_to 'Prosseguir', instagram_index_url, class: 'btn btn-primary' %>
+            <% end %>
+
+            <hr />
+
+            <%= link_to 'Voltar', about_social_media_path, class: 'btn btn-warning' %>
+        </div>
+    </div>
+</div>

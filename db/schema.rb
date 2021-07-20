@@ -64,6 +64,15 @@ ActiveRecord::Schema.define(version: 2021_07_20_035622) do
     t.integer "age"
     t.integer "business"
     t.string "sector"
+    t.boolean "responded_initial_guide", default: false
+    t.boolean "created_facebook_page", default: false
+    t.boolean "created_instagram_page", default: false
+    t.boolean "created_linkedin_page", default: false
+    t.boolean "created_youtube_page", default: false
+    t.boolean "responded_website", default: false
+    t.boolean "responded_public", default: false
+    t.boolean "responded_investment", default: false
+    t.boolean "responded_online_business", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"

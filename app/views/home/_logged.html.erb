@@ -6,7 +6,7 @@
             <hr />
 
             <p>
-                Esse será o primeiro passo para a sua <b>entrada</b> no mercado digital. 
+                Esse será o primeiro passo para a sua <b>entrada</b> no mercado digital, em <b>5 Passos</b>. <br />
                 Aqui em baixo você poderá visualizar todo o <b>passo a passo</b> para seu negócio começar 
                 a funcionar na <b>internet</b>!
             </p>
@@ -20,12 +20,12 @@
             
             <div class="task">
                 <div class="row">
-                    <div class="col-8">
-                        <h4>1º. O Guia Básico.</h4>
+                    <div class="col-8 <%= current_user.question_responses_percentage == 100 && 'responded' %>">
+                        <h4>1º. O Guia Básico. <b>(<%= current_user.question_responses_percentage %> %)</b></h4>
                     </div>
                     
                     <div class="col-4">
-                        <%= link_to 'Completar', initial_guide_index_path, :"data-turbolinks" => false, class: 'button ms-4' %>
+                        <%= link_to 'Completar', initial_guide_index_path, class: 'button ms-4' %>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-4">
-                        <%= link_to 'Completar', has_website_index_path, class: 'button ms-4' %>
+                        <%= link_to 'Completar', has_website_index_path, :"data-turbolinks" => false, class: 'button ms-4' %>
                     </div>
                 </div>
 

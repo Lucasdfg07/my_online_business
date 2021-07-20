@@ -1,5 +1,3 @@
-<%= javascript_pack_tag 'search' %>
-
 <div class="div_center mt-4">
     <div class="knowing_how">
         <div class="container">
@@ -27,26 +25,13 @@
                 Aqui você terá todo o <b>passo a passo</b> para digitalizar seu negócio, e enfim colocá-lo <b>online</b>.
             </p>
 
-            <p>
-                Sendo assim, vamos nos conhecer melhor, quais redes <b>seu negócio</b> possui?!
-            </p>
+            <hr />
+
+            <%= link_to 'Prosseguir', about_internet_index_path, class: 'btn btn-primary' %>
 
             <hr />
 
-            <%= form_with(model: @network) do |f| %>
-                <div class="field">
-                    <%= f.select(:name,  SocialNetwork.names.keys, {include_blank: 'Selecione'}, id: 'dropdown', class: 'form-control', multiple: true) %>
-                    <small><b>(Caso não tenha nenhuma, deixe em branco)</b></small>
-                </div>
-                
-                <div class="actions mt-2">
-                    <%= f.submit 'Prosseguir', class: 'btn btn-primary' %>
-                </div>
-            <% end %>
-
-            <hr />
-
-            <%= link_to 'Voltar', :back, class: 'btn btn-warning' %>
+            <%= link_to 'Voltar', root_path, class: 'btn btn-warning' %>
         </div>
     </div>
 </div>

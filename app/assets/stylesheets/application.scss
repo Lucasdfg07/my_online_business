@@ -42,6 +42,11 @@ body {
   height: 100%;
 }
 
+.notice, .alert {
+  z-index: 9999;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   body {
       background-size: cover;
