@@ -20,7 +20,7 @@
     <div class="selos">
         <h5>Selos</h5>
 
-        <%= image_tag 'selos/social_media' if current_user.question_responses_percentage %>
+        <%= image_tag 'selos/social_media' if current_user.question_responses_percentage == 100 %>
         <%= image_tag 'selos/website' if current_user.responded_website %>
         <%= image_tag 'selos/public_media' if current_user.responded_public %>
         <%= image_tag 'selos/ads' if current_user.responded_investment %>

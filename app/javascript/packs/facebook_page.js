@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
     $('.form_checkbox').on('click', function() {
         $('form').submit();
     });
