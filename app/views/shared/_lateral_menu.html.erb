@@ -1,0 +1,17 @@
+<div class="lateral_menu pt-4">
+    <div class="perfil_photo">
+        <%= image_tag current_user.perfil_photo %>
+    </div>
+
+    <hr />
+
+    <b><%= current_user.name %></b>
+
+    <hr />
+
+    <%= link_to 'Início', root_path, class: "dropdown-item" %>
+
+    <%= link_to 'Editar Perfil', edit_user_registration_path, class: "dropdown-item" %>
+
+    <%= link_to 'Sair', destroy_user_session_path, class: "dropdown-item" %>
+</div>

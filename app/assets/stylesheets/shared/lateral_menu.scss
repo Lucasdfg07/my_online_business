@@ -1,0 +1,13 @@
+.lateral_menu {
+    background-color: rgba(245,245,245,0.8);
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    width: inherit;
+    left: 0!important;
+    
+    .perfil_photo img {
+        width: 100px;
+        border-radius: 100%;
+    }
+}
