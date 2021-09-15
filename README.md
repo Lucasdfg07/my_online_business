@@ -78,6 +78,9 @@ Aqui estão as tecnologias utilizadas nesse projeto:
 
 ![Certificate](https://github.com/Lucasdfg07/my_online_business/blob/master/public/readme/certificate.png)
 
+### 6 - O projeto ficou em 5.o lugar no ranking nacional.
+![Award](https://github.com/Lucasdfg07/my_online_business/blob/master/public/readme/award.png)
+
 ## Funcionalidades
 
 As principais funcionalidades do projeto são:
@@ -88,8 +91,6 @@ As principais funcionalidades do projeto são:
 
 
 ## Links
-  - Deploy no Heroku: https://meu-negocio-online.herokuapp.com/
- 
   - Repositório: https://github.com/Lucasdfg07/my_online_business/
     - Em caso de bugs e/ou vulnerabilidades de segurança entre em contato com o email
       Lucassiqueiraferandes07@gmail.com diretamente ao invés de utilizar o "issue tracker". Valorizamos o 
